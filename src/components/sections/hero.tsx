@@ -1,12 +1,15 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import StageBgSvg from "../svg-overlay";
 import { useGSAP } from "@gsap/react";
 
 import { gsap } from "gsap";
 import { CustomButton } from "../custom-button";
 import { useMediaQuery } from "react-responsive";
+import { useLenis } from "lenis/react";
 
 export const Hero = () => {
+  const [isAnimating, setIsAnimating] = useState<boolean>(true);
+
   const parentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -14,8 +17,15 @@ export const Hero = () => {
   const rightContainerRef = useRef<HTMLDivElement>(null);
 
   const isMobileOrTablet = useMediaQuery({
-    query: "(max-width: 768px)",
+    query: "(max-width: 1024px)",
   });
+
+  const lenis = useLenis();
+
+  useEffect(() => {
+    if (isAnimating) lenis?.stop();
+    else lenis?.start();
+  }, [lenis, isAnimating]);
 
   useGSAP(
     () => {
@@ -25,7 +35,7 @@ export const Hero = () => {
         clipPath: "inset(0 48% 0 50%)",
         yPercent: 100,
       });
-      const tl = gsap.timeline();
+      const tl = gsap.timeline({ onComplete: () => setIsAnimating(false) });
 
       tl.to(containerRef.current, {
         keyframes: [
@@ -52,7 +62,7 @@ export const Hero = () => {
       <div className="h-10 w-full  bg-black top-0 z-999"></div>
       <div
         ref={containerRef}
-        className="h-screen bg-[#f9f8f8] flex flex-col-reverse lg:flex-row"
+        className="h-screen bg-[#f9f8f8] flex flex-col-reverse lg:flex-row border-b border-black/10"
       >
         {/*left*/}
         <div

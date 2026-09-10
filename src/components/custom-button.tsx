@@ -15,10 +15,10 @@ export const CustomButton = ({
 }: CustomButtonProps) => {
   return (
     <button
-      className={`bg-[#000000] text-white py-2 px-6 md:px-8 lg:px-10 cursor-pointer ${className}`}
+      className={`bg-[#000000] text-white py-2 px-6 md:px-8 cursor-pointer ${className}`}
       style={{ backgroundColor: bgColor, color: textColor }}
     >
-      <span className="uppercase font-semibold text-sm md:text-lg 2xl:text-xl">
+      <span className="uppercase font-semibold text-sm md:text-lg 2xl:text-lg">
         {text}
       </span>
     </button>
