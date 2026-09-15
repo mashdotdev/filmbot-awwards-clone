@@ -4,6 +4,7 @@ import { useRef } from "react";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
+import { Table } from "../table";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,7 +105,7 @@ export const SecondSection = () => {
         </div>
         <div
           ref={middleImageRef}
-          className="h-screen w-full lg:h-[130vh] lg:w-[30vw] overflow-hidden lg:rounded-lg shrink-0 relative"
+          className="h-screen w-full lg:h-[130vh] lg:w-[30vw] overflow-hidden lg:rounded-lg shrink-0 relative image-div"
         >
           <img
             src="src\\assets\\images\\second-main-image.webp"
@@ -135,7 +136,12 @@ export const SecondSection = () => {
         </div>
       </div>
 
-      <div className="h-screen bg-[#0e0c0c] text-white"></div>
+      <div className="h-screen bg-[#0e0c0c] text-white">
+        <div className="size-full container mx-auto pt-16 md:px-6 2xl:px-0">
+          {/*Table here*/}
+          <Table />
+        </div>
+      </div>
     </section>
   );
 };
