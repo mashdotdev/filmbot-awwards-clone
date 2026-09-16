@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 import { Table } from "../table";
+import { Marquee } from "../marquee";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,16 +115,27 @@ export const SecondSection = () => {
           />
 
           <div className="absolute bottom-12 z-10 text-white left-1/2 -translate-x-1/2 overflow-hidden">
-            <h2 className="text-center text-[4vw] leading-none font-arimo tracking-tighter">
+            <h2
+              className="text-center
+              text-[clamp(2.5rem,4vw,5rem)]
+              leading-none font-arimo tracking-tighter"
+            >
               Seamless Suite
               <br /> of Features
             </h2>
-            <p className="text-center mt-12 text-[1vw] leading-[1.2vw]">
+            <p
+              className="
+                mt-12
+                text-center
+                text-[clamp(1rem,1.2vw,1.125rem)]  text-balance
+                leading-[clamp(1.5rem,2vw,1.75rem)]
+              "
+            >
               By truly listening to cinema teams and valuing their insights, we{" "}
               <br />
               uncover opportunities to introduce more refined solutions, easing
-              their <br /> demanding workflows and elevating the audience
-              experience.
+              their <br />
+              demanding workflows and elevating the audience experience.
             </p>
           </div>
         </div>
@@ -136,10 +148,19 @@ export const SecondSection = () => {
         </div>
       </div>
 
-      <div className="h-screen bg-[#0e0c0c] text-white">
-        <div className="size-full container mx-auto pt-16 md:px-6 2xl:px-0">
+      <div className="min-h-[50vh] bg-[#0e0c0c] text-white">
+        <div className="size-full container mx-auto pt-16 md:fl-px-12/0">
           {/*Table here*/}
           <Table />
+
+          {/*integrations*/}
+          <div className="mt-32">
+            <p className="text-center text-white/50 font-arimo tracking-tight">
+              INTEGRATIONS
+            </p>
+
+            <Marquee />
+          </div>
         </div>
       </div>
     </section>
