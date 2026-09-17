@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 import { Table } from "../table";
 import { Marquee } from "../marquee";
+import { ProgressTracker } from "../progress-tracker";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -161,6 +162,24 @@ export const SecondSection = () => {
 
             <Marquee />
           </div>
+        </div>
+
+        <div className="container mx-auto flex flex-col items-center">
+          <p className="text-center uppercase font-arimo tracking-tighter text-[clamp(1.4rem,2vw,2rem)] leading-none">
+            moviegoers rely on theater websites
+          </p>
+          <p className="text-center font-arimo opacity-50 mt-2">
+            more than social media to find out about movies
+          </p>
+
+          <div className="mt-12 w-full md:w-2/3 2xl:w-1/3  flex flex-col gap-6 px-[clamp(1rem,2vw,0rem)]">
+            <ProgressTracker text="THEATRE WEBSITES" progress={54} />
+            <ProgressTracker text="SOCIAL MEDIA" progress={38} />
+          </div>
+
+          <p className="mt-12 text-xs opacity-50">
+            *2025 national audience survery
+          </p>
         </div>
       </div>
     </section>
