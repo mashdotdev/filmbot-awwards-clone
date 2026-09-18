@@ -8,6 +8,7 @@ function App() {
       <Hero />
       <SecondSection />
       <ThirdSection />
+      {/*<div className="h-screen"></div>*/}
     </main>
   );
 }

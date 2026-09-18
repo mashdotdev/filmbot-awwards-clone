@@ -43,7 +43,7 @@ export const SecondSection = () => {
   return (
     <section
       ref={parentContainerRef}
-      className="min-h-screen bg-[#f9f8f8] text-black pt-16 overflow-hidden"
+      className="min-h-screen bg-[#f9f8f8] text-black pt-16 overflow-hidden relative second-section"
     >
       {/*texts*/}
       <div className="px-8 md:px-12 lg:px-24">

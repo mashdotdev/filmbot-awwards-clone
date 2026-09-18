@@ -9,9 +9,10 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const ThirdSection = () => {
   const parentRef = useRef<HTMLDivElement>(null);
-
   const headingRef = useRef<HTMLHeadingElement>(null);
   const headingContainerRef = useRef<HTMLDivElement>(null);
+  const overlayImageRef = useRef<HTMLImageElement>(null);
+  const theatreDivRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -42,6 +43,16 @@ export const ThirdSection = () => {
           },
           "-=1.2",
         );
+
+      gsap.to(overlayImageRef.current, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: theatreDivRef.current,
+          start: "top top",
+          end: "center center",
+          scrub: true,
+        },
+      });
     },
     { scope: parentRef },
   );
@@ -49,23 +60,57 @@ export const ThirdSection = () => {
   return (
     <section
       ref={parentRef}
-      className="min-h-screen bg-[#0e0c0c] text-white pt-24"
+      className="min-h-screen bg-[#0e0c0c] text-white pt-32 overflow-hidden relative theatre-section"
     >
-      <div
-        ref={headingContainerRef}
-        className="overflow-hidden w-fit mx-auto relative"
-        style={{
-          clipPath: "inset(0% 47% 0% 53%)",
-        }}
-      >
-        <h1
-          ref={headingRef}
-          className="text-center font-bold font-roboto
-          text-[clamp(3rem,6vw,12rem)] leading-none"
+      <div ref={theatreDivRef} className="relative h-[130vh] overflow-hidden">
+        <div
+          ref={headingContainerRef}
+          className="overflow-hidden w-fit mx-auto relative z-10"
+          style={{
+            clipPath: "inset(0% 47% 0% 53%)",
+          }}
         >
-          BOLD <br /> WEBSITES
-        </h1>
+          <h1
+            ref={headingRef}
+            className="text-center font-bold font-roboto
+          text-[clamp(5rem,12vw,15rem)] leading-none"
+          >
+            BOLD <br /> WEBSITES
+          </h1>
+          <h2 className="text-center mt-8 uppercase font-roboto font-semibold">
+            from digital screens <br /> to the big screen
+          </h2>
+        </div>
+
+        <img
+          src="src\\assets\\images\\theatre.webp"
+          alt=""
+          className="absolute inset-0 w-full h-full object-top"
+        />
+
+        <img
+          ref={overlayImageRef}
+          src="src\\assets\\images\\ai-image.avif"
+          alt=""
+          className="absolute inset-0 h-[87vh] w-[82vw] rounded-lg object-cover z-5 left-2/4 -translate-x-2/4 brightness-60 top-3 opacity-0"
+        />
+
+        <div className="z-10 absolute bottom-12 px-4 w-full">
+          <p className="text-center w-full font-arimo text-[clamp(1rem,2vw,3rem)] tracking-tight leading-none">
+            Captivate audience with bold immersive layouts that <br /> celebrate
+            the art of curation through visual tracks of <br /> new releases,
+            repertory titles, film series, <br /> retrospectives, and special
+            evens.
+          </p>
+          <p className="mt-12 text-center mx-auto max-w-lg opacity-50 text-xs">
+            Evoke the style, history, and ambience of your distinct physical
+            space. Designed for navigation on any device, ensure interest
+            becomes action with a refreshingly easy ticket checkout experience
+            featuring Apple Pay and Google Pay.
+          </p>
+        </div>
       </div>
+      <div className="absolute inset-0 bg-[#0e0c0c]/90 z-4" />
     </section>
   );
 };
