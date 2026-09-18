@@ -115,15 +115,19 @@ export const Footer = () => {
       </div>
 
       {/*bottom*/}
-      <div className="px-12 mt-12 size-full max-md:min-h-fit">
+      <div className="px-12 mt-12 size-full max-md:pb-4">
         <div className="flex flex-col lg:flex-row size-full justify-between gap-6 ">
           <h6 className="border-t border-black/50 flex-1 pt-6 font-semibold text-[clamp(1.5rem,1vw,1rem)] tracking-tighter font-roboto leading-none">
             7M TICKETS SOLDS <span className="text-lg">[ AND COUNTING ]</span>
           </h6>
 
           <div className="border-t border-black/50 flex lg:items-center justify-around flex-col lg:flex-row flex-2 pt-6">
-            <div className="">buttons</div>
-            <div className="flex flex-col gap-2 max-md:my-12 ml-auto">
+            <div className="flex gap-4">
+              <div className="lg:py-5 lg:px-24 py-4 px-4 bg-[#ff4040] text-black">BOOK A DEMO</div>
+              <div className="lg:py-5 lg:px-24 py-4 px-4 border border-black/50 border-dashed text-black">CONTACT US</div>
+              <div></div>
+            </div>
+            <div className="flex flex-col gap-2 max-md:my-12 lg:ml-auto">
               <h6 className="font-semibold text-[clamp(1.5rem,1vw,1rem)]  tracking-tighter font-roboto leading-none uppercase">
                 hosting a film festival?
               </h6>
@@ -131,7 +135,7 @@ export const Footer = () => {
                 view festivals
               </span>
             </div>
-            <div className="flex flex-col max-md:flex-row max-md:justify-between ml-auto">
+            <div className="flex flex-col max-md:flex-row max-md:justify-between lg:ml-auto">
               <span>Privacy Policy</span>
               <span>©️ Filmbot, Inc</span>
             </div>
