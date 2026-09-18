@@ -30,6 +30,10 @@ export const Hero = () => {
   useGSAP(
     () => {
       if (!containerRef.current || !rightContainerRef.current) return;
+      if (window.scrollY > 0) {
+        setIsAnimating(false);
+        return;
+      }
 
       gsap.set(containerRef.current, {
         clipPath: "inset(0 48% 0 50%)",
