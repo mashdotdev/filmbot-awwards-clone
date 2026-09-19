@@ -42,27 +42,38 @@ export const Footer = () => {
   );
 
   return (
-    <footer
-      ref={footerRef}
-      className="min-h-screen bg-[#f9f8f8] relative overflow-hidden text-black"
-    >
+    <footer className="min-h-screen bg-[#f9f8f8] relative overflow-hidden text-black">
+      <div className="h-[90vh] flex items-center justify-center flex-col">
+        <p className="text-center uppercase font-roboto font-bold text-[clamp(3rem,6vw,9rem)] leading-[clamp(2rem,5vw,8rem)]">
+          a devoted advocate <br /> for the future of <br /> independent cinema
+        </p>
+        <p className="text-center max-w-3xl uppercase mt-24 text-[clamp(0.8rem,1vw,1.3rem)] leading-tight font-roboto">
+          We believe in the vital nature of the independent cinema experience to
+          connect audiences with their shared humanity. So we spearhead efforts
+          to build solidarity throughout our industry, uplift the next
+          generation of dedicated theater operators, and celebrate independent
+          cinema as a force of cultural resonance.
+        </p>
+      </div>
       {/*top*/}
-      <div className="px-12">
-        <div className="flex items-center justify-between h-[10vh]">
-          <h4 className="font-roboto font-semibold uppercase text-[clamp(1.5rem,2.5vw,3.5rem)] tracking-tight leading-none">
-            initiatives & projects
-          </h4>
-          <div>
-            <div></div>
+      <div ref={footerRef} className="lg:px-12 px-6">
+        <div className="border-t border-black/50">
+          <div className="flex items-center justify-between h-[10vh]">
+            <h4 className="font-roboto font-semibold uppercase text-[clamp(1.5rem,2.5vw,3.5rem)] tracking-tight leading-none">
+              initiatives & projects
+            </h4>
+            <div>
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
 
       {/*middle*/}
-      <div className="h-[50vh] lg:h-[75vh] flex pl-12 gap-6">
+      <div className="h-[50vh] lg:h-[75vh] flex lg:px-12 px-6 gap-6">
         <div
           ref={leftBoxRef}
-          className="h-full bg-red-400 lg:w-[33vw] shrink-0 rounded-lg relative lg:translate-x-[34vw] p-12 flex flex-col text-white"
+          className="h-full bg-red-400 lg:w-[33vw] flex-1 shrink-0 rounded-lg relative lg:translate-x-[34vw] p-12 flex flex-col text-white"
           style={{
             background: "url(src/assets/images/ft1.avif) no-repeat top/cover",
           }}
@@ -79,7 +90,7 @@ export const Footer = () => {
         </div>
 
         <div
-          className="h-full bg-black lg:w-[33vw] shrink-0 rounded-lg z-10 p-12 flex flex-col text-white"
+          className="h-full bg-black lg:w-[33vw] flex-1 shrink-0  rounded-lg z-10 p-12 flex flex-col text-white"
           style={{
             background: "url(src/assets/images/ft2.avif) no-repeat top/cover",
           }}
@@ -97,7 +108,7 @@ export const Footer = () => {
 
         <div
           ref={rightBoxRef}
-          className="h-full bg-amber-500 lg:w-[33vw] shrink-0 rounded-lg relative lg:-translate-x-[34vw] p-12 flex flex-col text-white"
+          className="h-full bg-amber-500 lg:w-[33vw] flex-1 shrink-0 rounded-lg relative lg:-translate-x-[34vw] p-12 flex flex-col text-white"
           style={{
             background: "url(src/assets/images/ft3.avif) no-repeat top/cover",
           }}
@@ -115,7 +126,7 @@ export const Footer = () => {
       </div>
 
       {/*bottom*/}
-      <div className="px-12 mt-12 size-full max-md:pb-4">
+      <div className="lg:px-12 px-6 mt-12 size-full max-md:pb-4">
         <div className="flex flex-col lg:flex-row size-full justify-between gap-6 ">
           <h6 className="border-t border-black/50 flex-1 pt-6 font-semibold text-[clamp(1.5rem,1vw,1rem)] tracking-tighter font-roboto leading-none">
             7M TICKETS SOLDS <span className="text-lg">[ AND COUNTING ]</span>
@@ -123,8 +134,12 @@ export const Footer = () => {
 
           <div className="border-t border-black/50 flex lg:items-center justify-around flex-col lg:flex-row flex-2 pt-6">
             <div className="flex gap-4">
-              <div className="lg:py-5 lg:px-24 py-4 px-4 bg-[#ff4040] text-black">BOOK A DEMO</div>
-              <div className="lg:py-5 lg:px-24 py-4 px-4 border border-black/50 border-dashed text-black">CONTACT US</div>
+              <div className="lg:py-5 2xl:px-24 py-3 px-4 bg-[#ff4040] text-black">
+                BOOK A DEMO
+              </div>
+              <div className="lg:py-5 2xl:px-24 py-3 px-4 border border-black/50 border-dashed text-black">
+                CONTACT US
+              </div>
               <div></div>
             </div>
             <div className="flex flex-col gap-2 max-md:my-12 lg:ml-auto">

@@ -3,6 +3,7 @@ import { SecondSection } from "./components/sections/second-section";
 import { ThirdSection } from "./components/sections/third-section";
 import { FourthSection } from "./components/sections/fourth-section";
 import { Footer } from "./components/sections/footer";
+import { ContactSection } from "./components/sections/contact-section";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
+      <ContactSection />
       <Footer />
     </main>
   );
