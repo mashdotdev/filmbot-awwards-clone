@@ -81,3 +81,7 @@
     background: linear-gradient(to bottom, transparent, #0e0c0c);
     pointer-events: none;
 }
+
+* {
+    box-sizing: border-box;
+}

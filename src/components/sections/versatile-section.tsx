@@ -11,7 +11,7 @@ export const VersatileSection = () => {
         <div className="lg:w-[60%] w-full flex flex-col px-6 lg:px-0">
           <p className="uppercase font-roboto font-bold">[ again and again ]</p>
           <div className="mt-auto">
-            <p className="font-medium font-roboto text-[clamp(1.5rem,2vw,3rem)] leading-none">
+            <p className="font-medium font-roboto text-[clamp(1rem,1.5vw,2rem)] leading-none">
               Audience Engine (01)
             </p>
             <h1 className="uppercase font-bold font-roboto text-[clamp(3rem,9vw,14rem)] leading-none mt-6">

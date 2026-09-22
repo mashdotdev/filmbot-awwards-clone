@@ -44,7 +44,7 @@ export const Footer = () => {
   return (
     <footer className="min-h-screen bg-[#f9f8f8] relative overflow-hidden text-black">
       <div className="h-[90vh] flex items-center justify-center flex-col">
-        <p className="text-center uppercase font-roboto font-bold text-[clamp(3rem,6vw,9rem)] leading-[clamp(2rem,5vw,8rem)]">
+        <p className="text-center uppercase font-roboto font-bold text-[clamp(3rem,6vw,9rem)] leading-[clamp(2.5rem,5.5vw,8rem)]">
           a devoted advocate <br /> for the future of <br /> independent cinema
         </p>
         <p className="text-center max-w-3xl uppercase mt-24 text-[clamp(0.8rem,1vw,1.3rem)] leading-tight font-roboto">

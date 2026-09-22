@@ -49,7 +49,7 @@ export const ThirdSection = () => {
         scrollTrigger: {
           trigger: theatreDivRef.current,
           start: "top top",
-          end: "center center",
+          end: "60% center",
           scrub: true,
         },
       });
