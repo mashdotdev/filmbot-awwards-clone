@@ -1,22 +1,22 @@
 export const SmarterSection = () => {
   return (
     <section className="relative overflow-hidden  bg-[#f9f8f8] text-[#171717] pt-56 pb-24  lg:pb-56">
-      <div className="lg:pl-44 px-6 lg:px-0 flex flex-col items-center">
+      <div className="lg:pl-44 px-6 lg:px-0 flex flex-col items-center lg:block">
         <p className="font-medium font-roboto text-[clamp(1rem,1.5vw,2rem)] leading-none">
           Audience Engine (02)
         </p>
         <h1 className="uppercase font-bold font-roboto text-center lg:text-start text-[clamp(3rem,9vw,14rem)] leading-none mt-6">
           smarter <br /> proportions
         </h1>
-        <p className="lg:max-w-5xl text-center lg:text-balance text-[clamp(1rem,1.5vw,2rem)] leading-none mt-12 font-roboto">
+        <p className="lg:max-w-5xl text-center lg:text-start lg:text-balance text-[clamp(1rem,1.5vw,2rem)] leading-none mt-12 font-roboto">
           Inspire audiences to return more frequently with compelling discount
           codes delivered through advanced marketing campaigns based on visit
           history and past movie attendance.
         </p>
       </div>
 
-      <div className="lg:min-h-screen  flex flex-col lg:flex-row mt-44 gap-12 lg:gap-0">
-        <div className="flex-1 px-4 ">
+      <div className="lg:min-h-screen flex flex-col lg:flex-row mt-44 gap-12 lg:gap-0">
+        <div className="flex-1 px-4 lg:px-0">
           <img
             src="src\\assets\\images\\eve-1.png"
             alt=""

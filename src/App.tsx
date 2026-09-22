@@ -6,6 +6,7 @@ import { Footer } from "./components/sections/footer";
 import { ContactSection } from "./components/sections/contact-section";
 import { VersatileSection } from "./components/sections/versatile-section";
 import { SmarterSection } from "./components/sections/smarter-section";
+import { ReviewSection } from "./components/sections/review-section";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
+      <ReviewSection />
       <VersatileSection />
       <SmarterSection />
       <ContactSection />
