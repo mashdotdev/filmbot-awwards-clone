@@ -6,15 +6,18 @@ import { gsap } from "gsap";
 import { CustomButton } from "../custom-button";
 import { useMediaQuery } from "react-responsive";
 import { useLenis } from "lenis/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   const [isAnimating, setIsAnimating] = useState<boolean>(true);
 
   const parentRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
   const leftContainerRef = useRef<HTMLDivElement>(null);
   const rightContainerRef = useRef<HTMLDivElement>(null);
+  const heroImageRef = useRef<HTMLImageElement>(null);
 
   const isMobileOrTablet = useMediaQuery({
     query: "(max-width: 1024px)",
@@ -30,6 +33,19 @@ export const Hero = () => {
   useGSAP(
     () => {
       if (!containerRef.current || !rightContainerRef.current) return;
+
+      if (!isMobileOrTablet) {
+        gsap.to(heroImageRef.current, {
+          yPercent: 20,
+          scrollTrigger: {
+            trigger: parentRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
       if (window.scrollY > 0) {
         setIsAnimating(false);
         return;
@@ -74,9 +90,10 @@ export const Hero = () => {
           className="relative w-full max-w-[57.5em] max-lg:h-full overflow-hidden"
         >
           <img
-            src="src\\assets\\images\\eve-1.png"
+            ref={heroImageRef}
+            src="https://images.unsplash.com/photo-1542272201-b1ca555f8505?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="object-cover size-full object-[20%]"
+            className="object-cover size-full object-[20%] scale-110"
           />
           <StageBgSvg
             className="absolute inset-0 size-full svg-overlay"

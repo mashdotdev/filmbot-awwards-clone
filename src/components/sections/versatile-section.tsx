@@ -29,14 +29,14 @@ export const VersatileSection = () => {
       <div className="min-h-[80vh] flex flex-col-reverse lg:flex-row gap-24 lg:gap-0 mt-32">
         <div className="lg:w-[40%] w-full lg:pt-8 pt-0 ">
           <img
-            src="src\\assets\\images\\eve-1.png"
+            src="https://images.unsplash.com/photo-1788497503432-b53df1c60e64?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="object-cover lg:rounded-md rounded-r-md lg:ml-12 lg:w-[20vw] w-[70%] h-[50vh]"
           />
         </div>
         <div className="lg:w-[60%] w-full self-end lg:self-start pl-8 lg:pl-0">
           <img
-            src="src\\assets\\images\\eve-1.png"
+            src="https://images.pexels.com/photos/6195562/pexels-photo-6195562.jpeg"
             alt=""
             className="object-cover lg:rounded-md rounded-l-md h-[40vh] lg:h-[80vh] w-full"
           />

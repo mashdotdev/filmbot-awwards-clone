@@ -18,7 +18,7 @@ export const SmarterSection = () => {
       <div className="lg:min-h-screen flex flex-col lg:flex-row mt-44 gap-12 lg:gap-0">
         <div className="flex-1 px-4 lg:px-0">
           <img
-            src="src\\assets\\images\\eve-1.png"
+            src="https://images.pexels.com/photos/2124698/pexels-photo-2124698.jpeg"
             alt=""
             className="object-cover w-full h-[50vh] lg:h-screen rounded-md lg:rounded-r-lg"
           />
@@ -41,12 +41,12 @@ export const SmarterSection = () => {
           </div>
           <div className="h-full flex gap-2 lg:justify-end lg:items-center">
             <img
-              src="src\\assets\\images\\eve-1.png"
+              src="https://images.pexels.com/photos/2394591/pexels-photo-2394591.jpeg"
               alt=""
               className="object-cover lg:w-[20vw] w-[40vw] h-[20vh] lg:h-[50vh] rounded-md"
             />
             <img
-              src="src\\assets\\images\\eve-1.png"
+              src="https://images.pexels.com/photos/31992862/pexels-photo-31992862.jpeg"
               alt=""
               className="object-cover w-[60vw] lg:w-[20vw] h-[40vh] lg:h-[60vh] rounded-md lg:rounded-l-md"
             />
