@@ -1,5 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
+import { useRef } from "react";
 
 interface SVGOverlayProps {
   className?: string;
@@ -19,47 +18,10 @@ export default function StageBgSvg({
   color,
   style,
   scale = 1.15,
-  animate = true,
-  duration = 0.9,
-  stagger = 0.12,
-  ease = "power3.out",
-  delay = 0,
-  onComplete,
+
   ...props
 }: SVGOverlayProps) {
   const svgRef = useRef<SVGSVGElement | null>(null);
-
-  // useLayoutEffect(() => {
-  //   if (!animate || !svgRef.current) return;
-
-  //   // respect reduced-motion preference
-  //   const prefersReduced = window.matchMedia(
-  //     "(prefers-reduced-motion: reduce)",
-  //   ).matches;
-  //   if (prefersReduced) {
-  //     onComplete?.();
-  //     return;
-  //   }
-
-  //   const paths = svgRef.current.querySelectorAll("path");
-
-  //   const ctx = gsap.context(() => {
-  //     gsap.fromTo(
-  //       paths,
-  //       { xPercent: -100 },
-  //       {
-  //         xPercent: 0,
-  //         duration,
-  //         ease,
-  //         stagger,
-  //         delay,
-  //         onComplete,
-  //       },
-  //     );
-  //   }, svgRef);
-
-  //   return () => ctx.revert();
-  // }, [animate, duration, stagger, ease, delay, onComplete]);
 
   const cx = 460;
   const cy = 710.5;

@@ -8,7 +8,6 @@ interface CustomButtonProps {
 
 export const CustomButton = ({
   text,
-  arrowEnabled = false,
   bgColor = "#000000",
   textColor = "#ffffff",
   className,
