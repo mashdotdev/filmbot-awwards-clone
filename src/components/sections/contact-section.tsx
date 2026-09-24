@@ -1,7 +1,7 @@
 export const ContactSection = () => {
   return (
     <section
-      className="h-[120vh] text-white relative overflow-hidden flex flex-col max-md:px-6 sm:px-6 lg:px-24 xl:px-32 2xl:px-60 justify-around"
+      className="min-h-[100svh] lg:min-h-[120svh] section-space text-white relative overflow-hidden flex flex-col page-gutter gap-12 justify-around"
       style={{
         background:
           "url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ) no-repeat center/cover",
@@ -11,7 +11,7 @@ export const ContactSection = () => {
         <p className="font-bold uppercase font-roboto text-[clamp(1rem,2vw,3rem)] mb-4 leading-none">
           more than a platform
         </p>
-        <h2 className="font-bold uppercase font-roboto text-[clamp(4rem,6vw,10rem)] leading-[clamp(3rem,5vw,9rem)]">
+        <h2 className="font-bold uppercase font-roboto text-[clamp(3rem,6vw,10rem)] leading-[0.95]">
           we're your <br /> partner
         </h2>
       </div>

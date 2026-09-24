@@ -20,7 +20,7 @@ export const Hero = () => {
   const heroImageRef = useRef<HTMLImageElement>(null);
 
   const isMobileOrTablet = useMediaQuery({
-    query: "(max-width: 1024px)",
+    query: "(width < 1024px)",
   });
 
   const lenis = useLenis();
@@ -34,7 +34,8 @@ export const Hero = () => {
     () => {
       if (!containerRef.current || !rightContainerRef.current) return;
 
-      if (!isMobileOrTablet) {
+      const media = gsap.matchMedia();
+      media.add("(min-width: 1024px)", () => {
         gsap.to(heroImageRef.current, {
           yPercent: 20,
           scrollTrigger: {
@@ -44,11 +45,11 @@ export const Hero = () => {
             scrub: true,
           },
         });
-      }
+      });
 
       if (window.scrollY > 0) {
         setIsAnimating(false);
-        return;
+        return () => media.revert();
       }
 
       gsap.set(containerRef.current, {
@@ -73,27 +74,28 @@ export const Hero = () => {
           "-=0.5",
         );
       });
+      return () => media.revert();
     },
     { scope: parentRef },
   );
 
   return (
-    <section ref={parentRef} className="realtive bg-black overflow-hidden">
+    <section ref={parentRef} className="relative bg-black overflow-hidden">
       <div className="h-10 w-full  bg-black top-0 z-999"></div>
       <div
         ref={containerRef}
-        className="h-screen bg-[#f9f8f8] flex flex-col-reverse lg:flex-row border-b border-black/10"
+        className="min-h-svh lg:min-h-[max(40rem,100svh)] bg-[#f9f8f8] flex flex-col-reverse lg:flex-row border-b border-black/10"
       >
         {/*left*/}
         <div
           ref={leftContainerRef}
-          className="relative w-full max-w-[57.5em] max-lg:h-full overflow-hidden"
+          className="relative w-full lg:w-1/2 min-h-[45svh] lg:min-h-0 overflow-hidden"
         >
           <img
             ref={heroImageRef}
             src="https://images.unsplash.com/photo-1542272201-b1ca555f8505?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="object-cover size-full object-[20%] scale-110"
+            className="absolute inset-0 object-cover size-full object-[20%] scale-110"
           />
           <StageBgSvg
             className="absolute inset-0 size-full svg-overlay"
@@ -103,7 +105,7 @@ export const Hero = () => {
         {/*right*/}
         <div
           ref={rightContainerRef}
-          className="size-full flex flex-col items-center justify-center text-black relative"
+          className="w-full lg:w-1/2 min-w-0 min-h-[55svh] px-4 pt-28 pb-16 lg:py-32 flex flex-col items-center justify-center text-black relative"
         >
           <div className="flex absolute top-0 right-0">
             <CustomButton
@@ -117,15 +119,15 @@ export const Hero = () => {
               className="flex-1"
             />
           </div>
-          <p className="font-semibold text-[4vw] md:text-[2.5vw] lg:text-[2vw] tracking-tight leading-none uppercase font-roboto text-[#171717]">
+          <p className="font-semibold text-[clamp(1rem,2.5vw,2.5rem)] lg:text-[clamp(1rem,2vw,2.5rem)] tracking-tight leading-tight uppercase font-roboto text-[#171717]">
             Ticketing for the new era of
           </p>
-          <h1 className="font-bold text-[12vw] md:text-[8vw] lg:text-[8.5vw] text-center leading-none uppercase font-roboto tracking-tight text-[#171717]">
+          <h1 className="font-bold text-[clamp(2.75rem,11vw,7rem)] lg:text-[clamp(4rem,8vw,11rem)] text-center leading-none uppercase font-roboto tracking-tight text-[#171717]">
             independent
             <br />
             cinemas
           </h1>
-          <p className="text-[3.5vw] md:text-[2.3vw] lg:text-[1.2vw] mt-12 leading-none tracking-tight font-roboto text-[#171717]">
+          <p className="text-[clamp(1rem,1.2vw,1.25rem)] mt-8 lg:mt-12 text-center leading-normal tracking-tight font-roboto text-[#171717]">
             More than a platform, we're your partner.
           </p>
         </div>

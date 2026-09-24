@@ -18,7 +18,7 @@
     --sans: system-ui, "Segoe UI", Roboto, sans-serif;
     --mono: ui-monospace, Consolas, monospace;
 
-    font: 18px/145% var(--sans);
+    font: clamp(16px, calc(14px + 0.278vw), 18px)/145% var(--sans);
     letter-spacing: 0.18px;
     color-scheme: light dark;
     color: var(--text);
@@ -28,9 +28,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @media (max-width: 1024px) {
-        font-size: 16px;
-    }
+    --page-gutter: clamp(1.5rem, 3.33vw, 3rem);
+    --section-space: clamp(4rem, 8vw, 8rem);
+    --editorial-space: clamp(4rem, 12vw, 11rem);
 }
 
 @theme {
@@ -65,7 +65,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1000px; /* adjust fade height */
+    height: min(100%, 1000px);
     background: linear-gradient(to bottom, transparent, #0e0c0c);
     pointer-events: none;
 }
@@ -84,4 +84,20 @@
 
 * {
     box-sizing: border-box;
+}
+
+/* Shared alignment for content; cinematic media remains full bleed. */
+@utility page-gutter {
+    padding-inline: var(--page-gutter);
+}
+
+@utility content-container {
+    width: 100%;
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
+}
+
+@utility section-space {
+    padding-block: var(--section-space);
 }

@@ -24,8 +24,8 @@ const COLUMN_THREE = [
 
 export const Table = () => {
   return (
-    <div className="grid w-full grid-cols-3 uppercase border-t border-white/20 pt-12 gap-6 fl-text-xs/1.2rem">
-      <div className="flex flex-col gap-6">
+    <div className="grid w-full grid-cols-1 md:grid-cols-3 uppercase border-t border-white/20 pt-8 md:pt-12 gap-6 text-sm lg:text-base [&>div]:min-w-0 [&_span]:min-h-14">
+      <div className="flex flex-col gap-2 md:gap-6">
         {COLUMN_ONE.map((item, index) => (
           <span
             key={index}
@@ -39,7 +39,7 @@ export const Table = () => {
           </span>
         ))}
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-2 md:gap-6">
         {COLUMN_TWO.map((item, index) => (
           <span
             key={index}
@@ -53,7 +53,7 @@ export const Table = () => {
           </span>
         ))}
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-2 md:gap-6">
         {COLUMN_THREE.map((item, index) => (
           <span
             key={index}

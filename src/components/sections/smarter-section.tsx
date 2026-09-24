@@ -1,31 +1,31 @@
 export const SmarterSection = () => {
   return (
-    <section className="relative overflow-hidden  bg-[#f9f8f8] text-[#171717] pt-56 pb-24  lg:pb-56">
-      <div className="lg:pl-44 px-6 lg:px-0 flex flex-col items-center lg:block">
+    <section className="relative overflow-hidden bg-[#f9f8f8] text-[#171717] py-[var(--editorial-space)]">
+      <div className="content-container flex flex-col items-center lg:block">
         <p className="font-medium font-roboto text-[clamp(1rem,1.5vw,2rem)] leading-none">
           Audience Engine (02)
         </p>
-        <h1 className="uppercase font-bold font-roboto text-center lg:text-start text-[clamp(3rem,9vw,14rem)] leading-none mt-6">
+        <h1 className="uppercase font-bold font-roboto text-center lg:text-start text-[clamp(2.5rem,9vw,14rem)] leading-none mt-6">
           smarter <br /> proportions
         </h1>
-        <p className="lg:max-w-5xl text-center lg:text-start lg:text-balance text-[clamp(1rem,1.5vw,2rem)] leading-none mt-12 font-roboto">
+        <p className="max-w-[55ch] text-center lg:text-start lg:text-balance text-[clamp(1rem,1.5vw,2rem)] leading-snug mt-8 lg:mt-12 font-roboto">
           Inspire audiences to return more frequently with compelling discount
           codes delivered through advanced marketing campaigns based on visit
           history and past movie attendance.
         </p>
       </div>
 
-      <div className="lg:min-h-screen flex flex-col lg:flex-row mt-44 gap-12 lg:gap-0">
-        <div className="flex-1 px-4 lg:px-0">
+      <div className="flex flex-col lg:flex-row mt-[var(--editorial-space)] gap-12 lg:gap-0">
+        <div className="flex-1 min-w-0 page-gutter lg:px-0">
           <img
             src="https://images.pexels.com/photos/2124698/pexels-photo-2124698.jpeg"
             alt=""
-            className="object-cover w-full h-[50vh] lg:h-screen rounded-md lg:rounded-r-lg"
+            className="object-cover w-full aspect-[4/3] lg:aspect-auto lg:h-[100svh] rounded-md lg:rounded-r-lg"
           />
         </div>
-        <div className="flex-1 flex flex-col gap-24">
-          <div className="lg:min-h-[60vh]">
-            <div className="size-full flex flex-col items-center justify-center relative px-6 lg:px-0">
+        <div className="flex-1 min-w-0 flex flex-col gap-12 lg:gap-24">
+          <div className="lg:min-h-[60svh] flex items-center justify-center">
+            <div className="w-full flex flex-col items-center justify-center relative page-gutter">
               <h4 className="font-roboto font-medium text-[clamp(3rem,8vw,12rem)] leading-none">
                 75%
               </h4>
@@ -39,16 +39,16 @@ export const SmarterSection = () => {
               </p>
             </div>
           </div>
-          <div className="h-full flex gap-2 lg:justify-end lg:items-center">
+          <div className="flex gap-2 items-start lg:justify-end lg:items-center">
             <img
               src="https://images.pexels.com/photos/2394591/pexels-photo-2394591.jpeg"
               alt=""
-              className="object-cover lg:w-[20vw] w-[40vw] h-[20vh] lg:h-[50vh] rounded-md"
+              className="object-cover min-w-0 w-[calc(40%-0.25rem)] lg:w-[40%] aspect-[4/5] lg:h-[50svh] rounded-md"
             />
             <img
               src="https://images.pexels.com/photos/31992862/pexels-photo-31992862.jpeg"
               alt=""
-              className="object-cover w-[60vw] lg:w-[20vw] h-[40vh] lg:h-[60vh] rounded-md lg:rounded-l-md"
+              className="object-cover min-w-0 w-[calc(60%-0.25rem)] lg:w-[40%] aspect-[3/4] lg:h-[60svh] rounded-md lg:rounded-l-md"
             />
           </div>
         </div>

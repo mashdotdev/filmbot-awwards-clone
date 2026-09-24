@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import theatreImage from "../../assets/images/theatre.webp";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -53,6 +54,7 @@ export const ThirdSection = () => {
           scrub: true,
         },
       });
+      return () => splitHeading.revert();
     },
     { scope: parentRef },
   );
@@ -60,9 +62,9 @@ export const ThirdSection = () => {
   return (
     <section
       ref={parentRef}
-      className="min-h-screen bg-[#0e0c0c] text-white pt-32 overflow-hidden relative theatre-section"
+      className="bg-[#0e0c0c] text-white pt-[var(--section-space)] overflow-hidden relative theatre-section"
     >
-      <div ref={theatreDivRef} className="relative h-[130vh] overflow-hidden">
+      <div ref={theatreDivRef} className="relative min-h-[max(48rem,130svh)] flex flex-col justify-between gap-24 pb-12 overflow-hidden">
         <div
           ref={headingContainerRef}
           className="overflow-hidden w-fit mx-auto relative z-10"
@@ -73,7 +75,7 @@ export const ThirdSection = () => {
           <h1
             ref={headingRef}
             className="text-center font-bold font-roboto
-          text-[clamp(5rem,12vw,15rem)] leading-none"
+          text-[clamp(3.5rem,12vw,15rem)] leading-none"
           >
             BOLD <br /> WEBSITES
           </h1>
@@ -83,20 +85,20 @@ export const ThirdSection = () => {
         </div>
 
         <img
-          src="src\\assets\\images\\theatre.webp"
+          src={theatreImage}
           alt=""
-          className="absolute inset-0 w-full h-full object-top"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
 
         <img
           ref={overlayImageRef}
           src="https://images.unsplash.com/photo-1700519144404-b39e522136e3?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
-          className="absolute inset-0 h-[87vh] w-[82vw] rounded-lg object-cover z-5 left-2/4 -translate-x-2/4 brightness-60 top-3 opacity-0"
+          className="absolute h-[67%] w-[82%] rounded-lg object-cover z-5 left-2/4 -translate-x-2/4 brightness-60 top-3 opacity-0"
         />
 
-        <div className="z-10 absolute bottom-12 px-4 w-full">
-          <p className="text-center w-full font-arimo text-[clamp(1rem,2vw,3rem)] tracking-tight leading-none">
+        <div className="z-10 relative content-container">
+          <p className="text-center max-w-[52ch] mx-auto font-arimo text-[clamp(1rem,2vw,3rem)] tracking-tight leading-snug [&_br]:hidden lg:[&_br]:block">
             Captivate audience with bold immersive layouts that <br /> celebrate
             the art of curation through visual tracks of <br /> new releases,
             repertory titles, film series, <br /> retrospectives, and special

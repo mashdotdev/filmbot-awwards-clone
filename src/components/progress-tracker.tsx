@@ -11,13 +11,13 @@ export const ProgressTracker = ({ progress, text }: ProgressTrackerProps) => {
           className="absolute inset-0 bg-red-500"
           style={{ width: `${progress}%` }}
         >
-          <span className="absolute right-0 top-2 text-sm text-red-500">
-            {progress}%
-          </span>
         </div>
       </div>
 
-      <p className="font-arimo text-sm tracking-tighter">{text}</p>
+      <div className="mt-2 flex justify-between gap-4 font-arimo text-sm tracking-tighter">
+        <p>{text}</p>
+        <span className="text-red-500">{progress}%</span>
+      </div>
     </div>
   );
 };

@@ -1,9 +1,11 @@
+import boxOfficeVideo from "../../assets/videos/fil-mov.mp4";
+
 export const FourthSection = () => {
   return (
     <section className="relative bg-[#0e0c0c] text-white">
-      <div className="min-h-screen pt-48">
+      <div className="pt-[var(--editorial-space)]">
         {/*first row*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:pl-12 lg:pl-16 2xl:pl-24 w-full gap-4 px-6 lg:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 page-gutter w-full gap-8 lg:gap-4">
           <div className="flex flex-col justify-center overflow-hidden">
             <span className="text-sm font-semibold uppercase">
               Cloud-Based Control
@@ -19,19 +21,19 @@ export const FourthSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-2 lg:col-span-2">
-            <div className="h-[35vh]  lg:h-[50vh] lg:flex-1 rounded-3xl bg-white/5 shrink-0"></div>
-            <div className="h-[35vh]  lg:h-[50vh] lg:flex-1 rounded-3xl bg-white/5 shrink-0"></div>
+          <div className="grid sm:grid-cols-2 gap-2 lg:col-span-2">
+            <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[25rem] rounded-3xl bg-white/5"></div>
+            <div className="aspect-[4/3] lg:aspect-auto lg:min-h-[25rem] rounded-3xl bg-white/5"></div>
           </div>
         </div>
 
         {/*second row*/}
-        <div className="mt-36 flex flex-col  lg:flex-row gap-6 md:pr-12 lg:pr-16 2xl:pr-24">
-          <div className="flex-2 h-full overflow-hidden relative">
+        <div className="mt-[var(--section-space)] flex flex-col lg:flex-row gap-8 lg:pr-[var(--page-gutter)]">
+          <div className="flex-2 min-w-0 overflow-hidden relative">
             <div className="absolute inset-0 bg-[#0e0c0c]/70" />
             <video
-              src="src\\assets\\videos\\fil-mov.mp4"
-              className="object-cover size-fit pointer-events-none"
+              src={boxOfficeVideo}
+              className="object-cover w-full h-full aspect-video pointer-events-none"
               autoPlay
               loop
               muted
@@ -39,8 +41,8 @@ export const FourthSection = () => {
             ></video>
           </div>
 
-          <div className="flex flex-col justify-center flex-1 px-6 lg:px-0">
-            <h2 className="font-roboto text-[clamp(4rem,8vw,12rem)] leading-none font-bold">
+          <div className="flex flex-col justify-center flex-1 min-w-0 page-gutter lg:px-0">
+            <h2 className="font-roboto text-[clamp(3rem,6vw,9rem)] leading-none font-bold">
               IPAD BOX <br /> OFFICE
             </h2>
             <p className="mt-4 mb-8 max-w-sm text-balance">

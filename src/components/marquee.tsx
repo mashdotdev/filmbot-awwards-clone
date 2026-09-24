@@ -11,11 +11,11 @@ const INTEGRATOINS = [
 export const Marquee = () => {
   return (
     <div className="relative mt-4">
-      <div className="flex justify-center gap-4 overflow-hidden h-[10vw]">
+      <div className="flex flex-wrap justify-center gap-4 pb-[var(--section-space)]">
         {INTEGRATOINS.map((integration, index) => (
           <div
             key={index}
-            className="px-4 bg-white/3 flex text-xs overflow-hidden items-center justify-center h-[5vw] w-[11vw] uppercase shrink-0"
+            className="px-4 bg-white/3 flex text-xs items-center justify-center min-h-16 w-32 lg:w-[11vw] lg:max-w-64 uppercase shrink-0"
           >
             {integration}
           </div>
