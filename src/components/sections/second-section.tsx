@@ -71,14 +71,14 @@ export const SecondSection = () => {
         <div className="flex gap-4 lg:gap-8">
           <div className="h-[35vh] w-[40vw] lg:h-[75vh] lg:w-[25vw] relative rounded-r-lg overflow-hidden">
             <img
-              src="src\\assets\\images\\tile-image-1.jpg"
+              src="https://images.unsplash.com/photo-1789595839936-ccc7473b5409?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="image"
               className="object-cover size-full"
             />
           </div>
-          <div className="h-[20vh] w-[25vw]   lg:h-[50vh] lg:w-[25vw] overflow-hidden rounded-lg relative">
+          <div className="h-[20vh] w-[25vw]  lg:h-[50vh] lg:w-[25vw] overflow-hidden rounded-lg relative">
             <img
-              src="src\\assets\\images\\tile-image-2.webp"
+              src="https://images.unsplash.com/photo-1789369422029-ddd5643435cd?q=80&w=918&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="image"
               className="object-cover size-full"
             />
@@ -86,7 +86,7 @@ export const SecondSection = () => {
         </div>
         <div className="h-[15vh] w-[20vw]  lg:h-[45vh] lg:w-[20vw] overflow-hidden rounded-lg relative">
           <img
-            src="src\\assets\\images\\tile-image-2.webp"
+            src="https://images.unsplash.com/photo-1789014538596-16dc5e095fef?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="image"
             className="object-cover size-full"
           />
@@ -100,7 +100,7 @@ export const SecondSection = () => {
       >
         <div className="w-[35vw] pt-44 overflow-hidden shrink-0">
           <img
-            src="src\\assets\\images\\tile-image-3.webp"
+            src="https://images.unsplash.com/photo-1596468673770-99f3d7f4999f?q=80&w=838&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="h-[50vh] w-[20vw] object-cover rounded-r-lg"
           />
@@ -110,7 +110,7 @@ export const SecondSection = () => {
           className="h-screen w-full lg:h-[130vh] lg:w-[30vw] overflow-hidden lg:rounded-lg shrink-0 relative image-div"
         >
           <img
-            src="src\\assets\\images\\second-main-image.webp"
+            src="https://images.unsplash.com/photo-1554216564-3b2db87a49d1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="object-cover size-full"
           />
@@ -142,7 +142,7 @@ export const SecondSection = () => {
         </div>
         <div className="w-[35vw] shrink-0 flex justify-end">
           <img
-            src="src\\assets\\images\\tile-image-4.webp"
+            src="https://images.unsplash.com/photo-1574302448191-794440103170?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="h-[70vh] w-[20vw] object-cover rounded-l-lg"
           />

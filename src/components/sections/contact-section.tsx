@@ -4,7 +4,7 @@ export const ContactSection = () => {
       className="h-[120vh] text-white relative overflow-hidden flex flex-col max-md:px-6 sm:px-6 lg:px-24 xl:px-32 2xl:px-60 justify-around"
       style={{
         background:
-          "url(src/assets/images/theatrebg.webp) no-repeat center/cover",
+          "url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ) no-repeat center/cover",
       }}
     >
       <div>

@@ -90,7 +90,7 @@ export const ThirdSection = () => {
 
         <img
           ref={overlayImageRef}
-          src="src\\assets\\images\\ai-image.avif"
+          src="https://images.unsplash.com/photo-1700519144404-b39e522136e3?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
           className="absolute inset-0 h-[87vh] w-[82vw] rounded-lg object-cover z-5 left-2/4 -translate-x-2/4 brightness-60 top-3 opacity-0"
         />

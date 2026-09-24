@@ -75,7 +75,7 @@ export const Footer = () => {
           ref={leftBoxRef}
           className="h-full bg-red-400 lg:w-[33vw] flex-1 shrink-0 rounded-lg relative lg:translate-x-[34vw] p-12 flex flex-col text-white"
           style={{
-            background: "url(src/assets/images/ft1.avif) no-repeat top/cover",
+            background: "url(https://images.unsplash.com/photo-1618154782021-6601491cfc0b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat top/cover",
           }}
         >
           <div>
@@ -92,7 +92,7 @@ export const Footer = () => {
         <div
           className="h-full bg-black lg:w-[33vw] flex-1 shrink-0  rounded-lg z-10 p-12 flex flex-col text-white"
           style={{
-            background: "url(src/assets/images/ft2.avif) no-repeat top/cover",
+            background: "url(https://images.unsplash.com/photo-1613592173563-cc06087dbebc?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat top/cover",
           }}
         >
           <div>
@@ -110,7 +110,7 @@ export const Footer = () => {
           ref={rightBoxRef}
           className="h-full bg-amber-500 lg:w-[33vw] flex-1 shrink-0 rounded-lg relative lg:-translate-x-[34vw] p-12 flex flex-col text-white"
           style={{
-            background: "url(src/assets/images/ft3.avif) no-repeat top/cover",
+            background: "url(https://images.unsplash.com/photo-1507502707541-f369a3b18502?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat top/cover",
           }}
         >
           <div>
